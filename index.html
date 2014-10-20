@@ -140,7 +140,6 @@
 				<!-- Intro -->
 					<section id="top" class="one dark cover">
 						<div class="container">
-
 							<header>
 								<h2 class="alt">Hi! I'm <strong>Wilfried</strong>.</h2>
 							</header>
@@ -269,6 +268,18 @@
 					</ul>
 				
 			</div>
+			<script type="text/javascript">
+			(function() {
+				var queue = []
+			  $.getJSON( "https://api.github.com/gists/c2e0522ac4fddb7ba06e")
+			    .done(function( data ) {
+			      for( file in data.files) {
+			      	
+			      	$('#entries-container').append("<article><header><h2>"+ file +"</h2></header>" + data.files[file].content + "</article><br/>");
+			      };
+			    });
+			})();
 
+			</script>
 	</body>
 </html>
