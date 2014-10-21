@@ -26,6 +26,98 @@
 	}
 
 
+	/* Pagination */
+
+		.pagination
+		{
+		}
+
+			.pagination .pages
+			{
+				display: none;
+			}
+
+	/* Box */
+
+		.box
+		{
+		}
+
+			.box.post
+			{
+				padding-bottom: 5em;
+				margin-bottom: 6em;
+			}
+
+				.box.post header
+				{
+				}
+
+					.box.post header > p
+					{
+						font-size: 1em;
+						font-family: 'Source Sans Pro', sans-serif;
+						line-height: 1.5em;
+					}
+
+				.box.post .info
+				{
+					width: 100%;
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					border-top: solid 1px #ddd;
+					padding-top: 0.5em;
+				}
+
+					.box.post .info .date
+					{
+						display: inline;
+					}
+					
+						.box.post .info .date .year
+						{
+							display: none;
+						}
+						
+						.box.post .info .date .month span
+						{
+							display: none;
+						}
+
+					.box.post .info .stats
+					{
+						display: inline;
+						border-left: solid 1px #ddd;
+						margin-left: 0.75em;
+						padding-left: 0.75em;
+					}
+
+						.box.post .info .stats li
+						{
+							display: inline-block;
+							margin-right: 0.85em;
+						}
+
+							.box.post .info .stats li a
+							{
+								display: inline-block;
+								opacity: 0.5;
+							}
+
+								.box.post .info .stats li a:before
+								{
+									position: relative;
+									top: 0.1em;
+									margin-right: 0.5em;
+									opacity: 0.35;
+								}
+
+								.box.post .info .stats li a:active
+								{
+									opacity: 1.0;
+								}
+
 	/* List */
 
 		ul
@@ -94,3 +186,14 @@
 			{
 				margin-top: 0;
 			}
+
+/*********************************************************************************/
+/* Content                                                                       */
+/*********************************************************************************/
+		
+	#content
+	{
+		margin-top: 44px;
+		padding: 3em 20px 2em 20px;
+	}
+
