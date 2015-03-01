@@ -6,6 +6,7 @@ layout: default
 
 <!-- This loops through the paginated posts -->
 {% for post in paginator.posts %}
+<div class="container">
     	<article class="box post post-excerpt">
                   <header>
                     <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
@@ -20,8 +21,9 @@ layout: default
                     </ul> -->
                   </div>
                   <p> {{ post.content | truncatewords:40}}</p>
-                  <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+                  <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Permalink</a>
          </article>
+</div>
 {% endfor %}
 
 <!-- Pagination links -->
