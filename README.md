@@ -1,4 +1,3 @@
-wilfriedE.github.io
+wilfriedE.me
 ===================
-
-My Website
+My place on the web.

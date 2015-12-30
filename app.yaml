@@ -1,0 +1,22 @@
+application: wilfriede
+version: 1
+runtime: python27
+threadsafe: true
+api_version: 1
+
+handlers:
+- url: /app/
+  static_dir: app/
+
+- url: /parallelism/
+  static_dir: parallelism/
+
+- url: /assets/
+  static_dir: assets/
+
+- url: /node_modules/
+  static_dir: static/node_modules
+
+- url: (.*)/.*
+  static_files: index.html
+  upload: index.html
