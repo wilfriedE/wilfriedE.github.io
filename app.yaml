@@ -8,14 +8,25 @@ handlers:
 - url: /app/
   static_dir: app/
 
-- url: /parallelism/
-  static_dir: parallelism/
+- url: /hyperspace/
+  static_dir: hyperspace/
+
+- url: /lens/
+  static_dir: lens/
 
 - url: /assets/
   static_dir: assets/
 
 - url: /node_modules/
   static_dir: static/node_modules
+
+- url: /w/.*
+  static_files: hyperspace/index.html
+  upload: hyperspace/index.html
+
+- url: /lens/.*
+  static_files: lens/index.html
+  upload: lens/index.html
 
 - url: (.*)/.*
   static_files: index.html

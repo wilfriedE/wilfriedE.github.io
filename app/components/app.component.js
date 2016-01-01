@@ -5,6 +5,8 @@
       templateUrl: '/app/views/wilfried.html'
     })
     .Class({
-      constructor: function() {}
+      constructor: function() {
+      	this.timer = 5;
+      }
     });
 })(window.app || (window.app = {}));
