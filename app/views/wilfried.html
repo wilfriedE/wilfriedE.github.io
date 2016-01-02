@@ -1,2 +1,3 @@
-Hello World ! Your journey continues in <span >{{timer}} seconds.</span>
-<!-- Type sudo to take control (not yet implemented) -->
+<div [ngSwitch]="getResource()">
+  <terminal *ngSwitchWhen="'terminal'"></terminal>
+</div>
