@@ -1,4 +1,3 @@
-wilfriedE.github.io
-===================
+## My place on the web. (wilfriede.me)
 
-My Website
+Hi there! :) 

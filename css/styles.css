@@ -1,0 +1,21 @@
+body {
+  background: #555;
+}
+h1 {
+  color: #369;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 250%;
+}
+
+.fill {
+    max-width:  100vw;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.view .mask {
+   overflow: scroll; /*Temporary fix for display*/
+ }
