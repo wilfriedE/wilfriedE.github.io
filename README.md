@@ -1,3 +1,3 @@
-wilfriedE.me
-===================
-My place on the web.
+## My place on the web. (wilfriede.me)
+
+Hi there! :) 

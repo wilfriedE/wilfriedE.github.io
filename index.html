@@ -1,26 +1,58 @@
-<!DOCTYPE HTML>
 <html>
-
   <head>
+    <base href="/">
     <title>Wilfried Hounyo</title>
-    <meta name="Description" content="My portal on the World Wide Web.">
-    <meta name="Keywords" content="Wilfried, Hounyo, Esperat, Wilfried Personal">
-    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="images/icon.png" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="node_modules/mdbootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Material Design Bootstrap -->
+    <link href="node_modules/mdbootstrap/css/mdb.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 
     <!-- 1. Load libraries -->
-    <script src="/node_modules/angular2/bundles/angular2-polyfills.js"></script>
-    <script src="/node_modules/rxjs/bundles/Rx.umd.js"></script>
-    <script src="/node_modules/angular2/bundles/angular2-all.umd.js"></script>
+    <!-- /js stuff-->
+    <script src='js/canvas-video-player.js'></script>
+    <script src='js/helper.js'></script>
 
-    <!-- 2. Load 'modules' -->
-    <script src='/app/components/terminal.component.js'></script>
-    <script src='/app/components/app.component.js'></script>
-    <script src='/app/boot.js'></script>
+    <!-- IE required polyfill -->
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+
+    <script src="node_modules/rxjs/bundles/Rx.js"></script>
+    <script src="node_modules/@angular/core/bundles/core.umd.js"></script>
+    <script src="node_modules/@angular/common/bundles/common.umd.js"></script>
+    <script src="node_modules/@angular/compiler/bundles/compiler.umd.js"></script>
+    <script src="node_modules/@angular/platform-browser/bundles/platform-browser.umd.js"></script>
+    <script src="node_modules/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js"></script>
+    <script src="node_modules/@angular/router/bundles/router.umd.js"></script>
+
+    <!-- 2. Load our 'modules' -->
+    <script src='app/components/app.navbar.js'></script>
+    <script src='app/components/app.introduction.js'></script>
+    <script src='app/components/app.portfolio.js'></script>
+    <script src='app/components/app.experience.js'></script>
+    <script src='app/components/app.playground.js'></script>
+    <script src='app/components/app.social.js'></script>
+    <script src='app/components/app.welcome.js'></script>
+    <script src='app/components/app.site.js'></script>
+    <script src='app/app.routing.js'></script>
+    <script src='app/app.module.js'></script>
+    <script src='app/main.js'></script>
 
   </head>
 
   <!-- 3. Display the application -->
-  <body>
-    <wilfried>Loading...</wilfried>
+  <body >
+    <div class="view">
+      <site >Loading...</site>
+    </div>
   </body>
+
 </html>

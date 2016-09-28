@@ -1,1 +1,0 @@
-The scripts directory contains a collection of scripts to auto generate contents etc.. for the site.
