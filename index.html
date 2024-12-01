@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal website of Wilfried Hounyo">
+    <meta name="keywords" content="Wilfried Hounyo, Software Developer, Technology, Programming">
+    <meta name="author" content="Wilfried Hounyo">
+    <meta property="og:title" content="Wilfried Hounyo - Personal Website">
+    <meta property="og:description" content="Personal website of Wilfried Hounyo">
+    <meta property="og:type" content="website">
+    <title>Wilfried Hounyo</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #2f4858 0%, #2f5c6d 100%);
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            padding: 2rem;
+            line-height: 1.5;
+            color: #ffffff;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+        .header {
+            text-align: right;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            margin: 0 20px;
+            padding: 20px 0;
+            font-size: 2.5rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        .subtitle {
+            color: #ffffff;
+            text-align: right;
+            font-size: 1.2rem;
+            margin: 1rem 0 2rem;
+            font-weight: 300;
+            max-width: 600px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: right;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 20px;
+        }
+        li {
+            margin: 1.5rem 0;
+            padding: 0 20px;
+        }
+        a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 1.4rem;
+            font-weight: 500;
+            position: relative;
+            display: inline-block;
+            padding: 0.2rem 0;
+        }
+        a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #ffffff;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease-in-out;
+        }
+        a:hover::after, a:focus::after {
+            transform: scaleX(1);
+        }
+        a:focus {
+            outline: none;
+        }
+        .ripple {
+            position: absolute;
+            border: 2px solid;
+            border-radius: 50%;
+            pointer-events: none;
+            animation: ripple 1s linear forwards;
+        }
+        @keyframes ripple {
+            0% {
+                width: 0;
+                height: 0;
+                opacity: 0.5;
+            }
+            100% {
+                width: 200px;
+                height: 200px;
+                opacity: 0;
+            }
+        }
+        @media (max-width: 768px) {
+            .header {
+                font-size: 2rem;
+            }
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            a {
+                font-size: 1.2rem;
+            }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            a::after {
+                transition: none;
+            }
+            .ripple {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wave-container"></div>
+    <h1 class="header">Hi! I'm Will. </h1>
+    <p class="subtitle">Here are some places where you can find me on the internet</p>
+    <ul>
+        <li><a href="https://www.linkedin.com/in/wilfriede" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        <li><a href="https://github.com/wilfriedE" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+    </ul>
+    <script>
+        let currentRippleColor = '#ffffff';
+
+        document.addEventListener('click', (e) => {
+            if (e.clientX < window.innerWidth * 0.25) {
+                // Generate random color on click
+                currentRippleColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+            }
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            // Only create ripples in the left 25% of the screen
+            if (e.clientX < window.innerWidth * 0.25) {
+                const ripple = document.createElement('div');
+                ripple.className = 'ripple';
+                ripple.style.borderColor = currentRippleColor;
+                ripple.style.left = e.clientX + 'px';
+                ripple.style.top = e.clientY + 'px';
+                document.body.appendChild(ripple);
+                
+                // Remove the ripple element after animation completes
+                ripple.addEventListener('animationend', () => {
+                    ripple.remove();
+                });
+            }
+        });
+    </script>
+    <!-- Yes this site was AI generated but its been under construction for way too long. "Except this line ;) -->
+</body>
+</html>
